@@ -1,0 +1,3 @@
+export const COUNT_INCREMENT = 'COUNT_INCREMENT';
+
+export const API_REQUEST = 'API_REQUEST';
