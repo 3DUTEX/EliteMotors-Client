@@ -1,13 +1,16 @@
 // Imports Libs
 import React from 'react';
+import { FaUserCircle } from 'react-icons/fa';
 
 // Imports Modules
-import DesktopContainer from './styled';
+import { DesktopContainer, LogoContainer } from './styled';
 
 export default function Desktop() {
   return (
     <DesktopContainer>
-      <div>LOGO</div>
+      <LogoContainer>
+        <h2>ELITE MOTORS</h2>
+      </LogoContainer>
       <div className="options">
         <ul>
           <li>option1</li>
@@ -16,9 +19,7 @@ export default function Desktop() {
           <li>option4</li>
         </ul>
       </div>
-      <div>
-        Logar
-      </div>
+      <FaUserCircle size={40} />
     </DesktopContainer>
   );
 }
