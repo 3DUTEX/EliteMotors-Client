@@ -7,7 +7,7 @@ export const MobileContainer = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  z-index: 2;
+  z-index: 3;
   position: fixed;
   width: 100%;
   padding: 30px;
@@ -24,6 +24,7 @@ export const Menu = styled.div`
   align-items: center;
   justify-content: center;
 
+  z-index: 2;
   top: 75px;
   left: ${({ show }) => (show ? '0%' : '-100%')};
   bottom: 0;

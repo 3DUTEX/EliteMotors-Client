@@ -34,9 +34,11 @@ export const PresentationContainer = styled.section`
     flex-direction: column;
     gap: 30px 0;
 
+    max-width: 100%;
+
     .image-container img{
-      width: 350px;
-      margin: 30px;
+      width: 100%;
+      margin: 0;
     }
   }
 `;
