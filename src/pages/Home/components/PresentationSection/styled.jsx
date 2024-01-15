@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { FONT_DEFAULT } from '../../styles/default';
+import { FONT_DEFAULT } from '../../../../styles/default';
 
 export const PresentationContainer = styled.section`
   display: flex;
