@@ -12,18 +12,18 @@ export const PresentationContainer = styled.section`
   margin: 0 auto 0 auto;
   padding: 30px;
 
-  /* box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  border-radius: 8px; */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
 
   font-family: ${FONT_DEFAULT};
   overflow-x: hidden;
+  background: #fff;
 
   .text-container{
     transform: translateY(100px);
     opacity: 0;
     width: 50%;
     font-size: 20px;
-    margin-top: 75px;
   }
 
   .text-container h1{
@@ -46,7 +46,8 @@ export const PresentationContainer = styled.section`
     flex-direction: column;
     gap: 30px 0;
 
-    max-width: 100%;
+    margin: 100px auto;
+    max-width: 95%;
 
     .text-container{
       width: 100%;

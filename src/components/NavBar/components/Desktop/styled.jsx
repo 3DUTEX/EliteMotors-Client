@@ -29,7 +29,7 @@ export const DesktopContainer = styled.div`
   }
 
   .text:hover{
-    transition: 150ms ease-in-out;
+    transition: color 150ms ease-in-out;
     color: ${SECUNDARY_COLOR};
     cursor: pointer;
   }

@@ -8,7 +8,7 @@ export const StepsContainer = styled.section`
 
   width: 100%;
   padding: 30px;
-  margin-top: 100px;
+  /* margin-top: 100px; */
 
   font-family: ${FONT_DEFAULT};
   background: #000;
