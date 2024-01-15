@@ -31,7 +31,16 @@ export const StepsContainer = styled.section`
     gap: 0 30px;
   }
 
-  @media (max-width: 720px){
+  // Tablet
+  @media (max-width: 920px){
+    .itens{
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+  }
+
+    // Mobile
+    @media (max-width: 720px){
     .itens{
       flex-direction: column;
       gap: 50px 0;

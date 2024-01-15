@@ -50,12 +50,22 @@ export const StepItemContainer = styled.div`
     border-radius: 8px;
   }
 
-  @media (max-width: 720px){
-    width: 100%;
-    height: 400px;
+  // Tablet
+  @media (max-width: 920px){
+    .itens{
+      gap: 30px;
+      flex-wrap: wrap;
+    }
 
     &:hover {
       transform: scale(1.1);
     }
+  }
+
+  // Mobile
+  @media (max-width: 720px){
+    width: 100%;
+    height: 400px;
+
   }
 `;
