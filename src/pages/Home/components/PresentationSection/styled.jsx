@@ -18,6 +18,7 @@ export const PresentationContainer = styled.section`
   font-family: ${FONT_DEFAULT};
 
   .text-container{
+    width: 50%;
     font-size: 20px;
     margin-top: 75px;
   }
@@ -26,8 +27,12 @@ export const PresentationContainer = styled.section`
     font-size: 40px;
   }
 
+  .image-container{
+    width: 50%;
+  }
+
   .image-container img{
-    width: 500px;
+    width:100%;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
   }
@@ -37,6 +42,14 @@ export const PresentationContainer = styled.section`
     gap: 30px 0;
 
     max-width: 100%;
+
+    .text-container{
+      width: 100%;
+    }
+
+    .image-container{
+      width: 100%;
+    }
 
     .image-container img{
       width: 100%;
