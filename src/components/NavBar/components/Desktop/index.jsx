@@ -9,17 +9,17 @@ export default function Desktop() {
   return (
     <DesktopContainer>
       <LogoContainer>
-        <h2>ELITE MOTORS</h2>
+        <h2 className="text">ELITE MOTORS</h2>
       </LogoContainer>
       <div className="options">
         <ul>
-          <li>option1</li>
-          <li>option2</li>
-          <li>option3</li>
-          <li>option4</li>
+          <li className="text">Home</li>
+          <li className="text">Contato</li>
+          <li className="text">Locais</li>
+          <li className="text">option4</li>
         </ul>
       </div>
-      <FaUserCircle size={40} />
+      <FaUserCircle size={40} className="text" />
     </DesktopContainer>
   );
 }

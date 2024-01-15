@@ -27,8 +27,8 @@ export default function Mobile() {
   return (
     <>
       <MobileContainer>
-        <h2>ELITE MOTORS</h2>
-        <FaBars size={30} onClick={showMenu} cursor="pointer" />
+        <h2 className="option">ELITE MOTORS</h2>
+        <FaBars size={30} onClick={showMenu} className="option" />
       </MobileContainer>
       {menu && (
       <Menu show={show}>
@@ -36,9 +36,9 @@ export default function Mobile() {
           <li>
             <FaUserCircle size={100} />
           </li>
-          <li>option1</li>
-          <li>option2</li>
-          <li>option3</li>
+          <li className="option">Home</li>
+          <li className="option">Contato</li>
+          <li className="option">Locais</li>
         </ul>
       </Menu>
       )}
