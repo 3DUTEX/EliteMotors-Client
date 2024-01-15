@@ -37,6 +37,18 @@ export const DesktopContainer = styled.div`
     color: ${SECUNDARY_COLOR};
     cursor: pointer;
   }
+
+  .login-container {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+  }
+
+  .login-container:hover{
+    transition: 250ms ease;
+    color: ${SECUNDARY_COLOR};
+    cursor: pointer;
+  }
 `;
 
 export const LogoContainer = styled.div`

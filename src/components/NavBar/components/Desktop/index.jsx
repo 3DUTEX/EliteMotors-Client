@@ -19,7 +19,10 @@ export default function Desktop() {
           <li className="text">option4</li>
         </ul>
       </div>
-      <FaUserCircle size={40} className="text" />
+      <div className="login-container">
+        <p>Entrar</p>
+        <FaUserCircle size={40} />
+      </div>
     </DesktopContainer>
   );
 }
