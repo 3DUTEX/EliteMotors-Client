@@ -17,6 +17,10 @@ export const MobileContainer = styled.div`
   background: #fff;
   font-family: ${FONT_DEFAULT};
 
+  .logo-title{
+    color: ${SECUNDARY_COLOR};
+  }
+
   .option:hover{
     transition: 150ms ease-in-out;
     color: ${SECUNDARY_COLOR};
@@ -52,6 +56,10 @@ export const Menu = styled.div`
   li{
     font-size: 20px;
     padding: 25px 0;
+  }
+
+  .logo-title{
+    color: ${SECUNDARY_COLOR};
   }
 
   .option{

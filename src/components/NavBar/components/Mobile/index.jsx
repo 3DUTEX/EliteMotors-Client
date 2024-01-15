@@ -27,7 +27,7 @@ export default function Mobile() {
   return (
     <>
       <MobileContainer>
-        <h2 className="option">ELITE MOTORS</h2>
+        <h2 className="logo-title">ELITE MOTORS</h2>
         <FaBars size={30} onClick={showMenu} className="option" />
       </MobileContainer>
       {menu && (

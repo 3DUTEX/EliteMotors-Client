@@ -24,6 +24,10 @@ export const DesktopContainer = styled.div`
     overflow-x: auto;
   }
 
+  .logo-title{
+    color: ${SECUNDARY_COLOR};
+  }
+
   .text{
     text-transform: uppercase;
   }

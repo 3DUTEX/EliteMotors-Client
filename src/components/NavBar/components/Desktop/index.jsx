@@ -9,7 +9,7 @@ export default function Desktop() {
   return (
     <DesktopContainer>
       <LogoContainer>
-        <h2 className="text">ELITE MOTORS</h2>
+        <h2 className="logo-title">ELITE MOTORS</h2>
       </LogoContainer>
       <div className="options">
         <ul>
