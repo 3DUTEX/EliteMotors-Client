@@ -16,8 +16,11 @@ export const PresentationContainer = styled.section`
   border-radius: 8px; */
 
   font-family: ${FONT_DEFAULT};
+  overflow-x: hidden;
 
   .text-container{
+    transform: translateY(100px);
+    opacity: 0;
     width: 50%;
     font-size: 20px;
     margin-top: 75px;
@@ -28,6 +31,8 @@ export const PresentationContainer = styled.section`
   }
 
   .image-container{
+    transform: translateX(500px);
+    opacity: 0;
     width: 50%;
   }
 

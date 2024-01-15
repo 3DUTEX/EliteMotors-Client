@@ -26,6 +26,8 @@ export const StepsContainer = styled.section`
   }
 
   .itens{
+    opacity: 0;
+    transform: translateY(200px);
     display: flex;
     justify-content: center;
     gap: 0 30px;

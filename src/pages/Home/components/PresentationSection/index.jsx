@@ -1,10 +1,29 @@
 // Imports Libs
-import React from 'react';
+import { gsap } from 'gsap';
+import React, { useLayoutEffect } from 'react';
 
 // Imports Modules
 import { PresentationContainer } from './styled';
 
 export default function PresentationSection() {
+  // Animations
+  useLayoutEffect(() => {
+    gsap.to('.text-container', {
+      opacity: 1,
+      y: 0,
+    });
+    gsap.to('.image-container', {
+      opacity: 1,
+      x: 0,
+      ease: 'back.inOut',
+    });
+
+    return () => {
+      gsap.killTweensOf('.text-container');
+      gsap.killTweensOf('.image-container');
+    };
+  }, []);
+
   return (
     <PresentationContainer>
       <div className="text-container">

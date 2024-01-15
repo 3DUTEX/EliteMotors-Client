@@ -1,7 +1,12 @@
-import React from 'react';
+// Imports Libs
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useLayoutEffect } from 'react';
 import {
   FaCheck, FaEye, FaFlag, FaMoneyCheckAlt,
 } from 'react-icons/fa';
+
+// Imports Modules
 import StepItem from './components/StepItem';
 import { StepsContainer } from './styled';
 
@@ -33,6 +38,24 @@ const stepsItens = [
 ];
 
 export default function StepsSection() {
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to('.itens', {
+      opacity: 1,
+      y: 0,
+      ease: 'back.out',
+      scrollTrigger: {
+        trigger: '.main-container',
+        // markers: true,
+        start: 'top 300 px',
+      },
+    });
+
+    return () => {
+      gsap.killTweensOf('.itens');
+    };
+  }, []);
+
   return (
     <StepsContainer>
       <div className="main-container">
