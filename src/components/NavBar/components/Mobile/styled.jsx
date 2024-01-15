@@ -68,7 +68,7 @@ export const Menu = styled.div`
 
   .option:hover{
     transition: 200ms ease;
-    background: ${SECUNDARY_COLOR};
+    background: #000000;
     color: #fff;
     cursor: pointer;
   }

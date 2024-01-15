@@ -28,11 +28,11 @@ export const DesktopContainer = styled.div`
     color: ${SECUNDARY_COLOR};
   }
 
-  .text{
+  .option{
     text-transform: uppercase;
   }
 
-  .text:hover{
+  .option:hover{
     transition: color 150ms ease-in-out;
     color: ${SECUNDARY_COLOR};
     cursor: pointer;
@@ -56,5 +56,4 @@ export const LogoContainer = styled.div`
   justify-content: center;
   align-items: center;
   transition: 1s ease;
-
 `;

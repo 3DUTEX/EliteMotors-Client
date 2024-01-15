@@ -13,10 +13,10 @@ export default function Desktop() {
       </LogoContainer>
       <div className="options">
         <ul>
-          <li className="text">Home</li>
-          <li className="text">Contato</li>
-          <li className="text">Locais</li>
-          <li className="text">option4</li>
+          <li className="option">Home</li>
+          <li className="option">Contato</li>
+          <li className="option">Locais</li>
+          <li className="option">option4</li>
         </ul>
       </div>
       <div className="login-container">
