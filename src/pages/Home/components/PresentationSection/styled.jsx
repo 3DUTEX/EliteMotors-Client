@@ -18,6 +18,7 @@ export const PresentationContainer = styled.section`
   font-family: ${FONT_DEFAULT};
 
   .text-container{
+    font-size: 20px;
     margin-top: 75px;
   }
 
@@ -28,6 +29,7 @@ export const PresentationContainer = styled.section`
   .image-container img{
     width: 500px;
     border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
   }
 
   @media (max-width: 720px){

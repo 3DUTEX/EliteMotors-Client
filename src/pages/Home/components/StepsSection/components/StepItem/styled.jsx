@@ -8,7 +8,7 @@ export const StepItemContainer = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 20px 0;
+  gap: 10px 0;
 
   width: 350px;
   height: 300px;
@@ -32,6 +32,7 @@ export const StepItemContainer = styled.div`
   }
 
   p{
+    padding: 10px;
     font-size: 20px;
     height: 100px;
     overflow-y: auto;
@@ -39,6 +40,10 @@ export const StepItemContainer = styled.div`
 
   &:hover{
     transform: translateY(-30px);
+  }
+
+  ::-webkit-scrollbar-track{
+    background: #fff;
   }
 
   ::-webkit-scrollbar-thumb {
