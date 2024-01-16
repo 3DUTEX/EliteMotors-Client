@@ -1,14 +1,17 @@
+// Imports Libs
 import gsap from 'gsap';
+import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import { FaArrowUp } from 'react-icons/fa';
 
+// Imports modules
 import { QuestionContainer } from './styled';
 
 export default function Question({ id }) {
-  const [display, setDisplay] = useState(false);
+  const [isShow, setIsShow] = useState(false);
 
   function handleClick() {
-    if (display) {
+    if (isShow) {
       gsap.to(`#questionDesc${id}`, {
         height: 0,
         opacity: 0,
@@ -16,26 +19,23 @@ export default function Question({ id }) {
       gsap.to(`#arrow${id}`, {
         rotate: '0',
       });
-      setTimeout(() => {
-        setDisplay(false);
-      }, 150);
+      return setIsShow(false);
     }
-    if (!display) {
-      setDisplay(true);
-      setTimeout(() => {
-        gsap.to(`#questionDesc${id}`, {
-          height: 75,
-          opacity: 1,
-        });
-        gsap.to(`#arrow${id}`, {
-          rotate: '180',
-        });
-      }, 50);
+    if (!isShow) {
+      gsap.to(`#questionDesc${id}`, {
+        height: 75,
+        opacity: 1,
+      });
+      gsap.to(`#arrow${id}`, {
+        rotate: '180',
+      });
+      return setIsShow(true);
     }
+    return null;
   }
 
   return (
-    <QuestionContainer display={display}>
+    <QuestionContainer>
       <div className="question-title" id={`questionTitle${id}`}>
         <h2>Question title</h2>
         <FaArrowUp
@@ -57,3 +57,7 @@ export default function Question({ id }) {
     </QuestionContainer>
   );
 }
+
+Question.propTypes = {
+  id: PropTypes.string.isRequired,
+};
