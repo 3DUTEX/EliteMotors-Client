@@ -19,7 +19,7 @@ export const PresentationContainer = styled.div`
   gap: 0 30px;
 
   max-width: 80%;
-  margin: 0 auto 0 auto;
+  margin: 100px auto 100px auto;
   padding: 30px;
 
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -40,7 +40,7 @@ export const PresentationContainer = styled.div`
     font-size: 40px;
   }
 
-  .image-container{
+  /* .image-container{
     transform: translateX(500px);
     opacity: 0;
     width: 50%;
@@ -50,7 +50,7 @@ export const PresentationContainer = styled.div`
     width:100%;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
+  } */
 
   @media (max-width: 720px){
     flex-direction: column;

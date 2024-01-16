@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import React, { useLayoutEffect } from 'react';
 
 // Imports Modules
+import PresentationSlider from './PresentationSlider';
 import { PresentationContainer, SectionPresentation } from './styled';
 
 export default function PresentationSection() {
@@ -36,9 +37,10 @@ export default function PresentationSection() {
             Aperiam, perferendis? Modi omnis natus facere soluta?
           </p>
         </div>
-        <div className="image-container">
+        {/* <div className="image-container">
           <img src="https://img.freepik.com/fotos-premium/foto-de-um-audi-sline-preto-dirigindo-jogue-a-chuva-a-noite_935552-1601.jpg" alt="Imagem de um carro" />
-        </div>
+        </div> */}
+        <PresentationSlider />
       </PresentationContainer>
     </SectionPresentation>
   );

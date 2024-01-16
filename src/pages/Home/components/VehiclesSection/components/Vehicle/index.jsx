@@ -24,7 +24,7 @@ export default function Vehicle({ vehicle }) {
       <div className="info-container">
         <h3>{vehicle.name}</h3>
         <p>{vehicle.model}</p>
-        <CustomButton padding="5px" onClick={handleClickButton}>Ver mais</CustomButton>
+        <CustomButton padding="10px" onClick={handleClickButton}>Ver mais</CustomButton>
       </div>
     </VehicleContainer>
   );
