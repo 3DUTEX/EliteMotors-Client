@@ -1,18 +1,22 @@
 import styled from 'styled-components';
 
-import { FONT_DEFAULT, SECUNDARY_COLOR } from '../../../../styles/default';
+import { FONT_DEFAULT, PRIMARY_COLOR } from '../../../../styles/default';
 
 export const DesktopContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
 
+  z-index: 2;
+  position: fixed;
   font-family: ${FONT_DEFAULT};
   font-size: 18px;
   width: 100%;
   max-height: 75px;
   padding: 20px 40px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+  background: #fff;
 
   .options {
     // options config
@@ -25,7 +29,7 @@ export const DesktopContainer = styled.div`
   }
 
   .logo-title{
-    color: ${SECUNDARY_COLOR};
+    color: ${PRIMARY_COLOR};
   }
 
   .option{
@@ -34,7 +38,7 @@ export const DesktopContainer = styled.div`
 
   .option:hover{
     transition: color 150ms ease-in-out;
-    color: ${SECUNDARY_COLOR};
+    color: ${PRIMARY_COLOR};
     cursor: pointer;
   }
 
@@ -46,7 +50,7 @@ export const DesktopContainer = styled.div`
 
   .login-container:hover{
     transition: 250ms ease;
-    color: ${SECUNDARY_COLOR};
+    color: ${PRIMARY_COLOR};
     cursor: pointer;
   }
 `;

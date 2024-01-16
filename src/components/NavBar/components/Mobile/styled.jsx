@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { FONT_DEFAULT, SECUNDARY_COLOR } from '../../../../styles/default';
+import { FONT_DEFAULT, PRIMARY_COLOR } from '../../../../styles/default';
 
 export const MobileContainer = styled.div`
   display: flex;
@@ -18,12 +18,12 @@ export const MobileContainer = styled.div`
   font-family: ${FONT_DEFAULT};
 
   .logo-title{
-    color: ${SECUNDARY_COLOR};
+    color: ${PRIMARY_COLOR};
   }
 
   .option:hover{
     transition: 150ms ease-in-out;
-    color: ${SECUNDARY_COLOR};
+    color: ${PRIMARY_COLOR};
     cursor: pointer;
   }
 `;
@@ -59,7 +59,7 @@ export const Menu = styled.div`
   }
 
   .logo-title{
-    color: ${SECUNDARY_COLOR};
+    color: ${PRIMARY_COLOR};
   }
 
   .option{
