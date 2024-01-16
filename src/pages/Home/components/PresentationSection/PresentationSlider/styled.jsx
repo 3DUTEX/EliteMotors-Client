@@ -5,7 +5,7 @@ export const SliderPresentation = styled.div`
 
 
   .swiper-container{
-    padding: 30px;
+    padding: 5px;
     width: 100%;
     height:40vw;
   }
@@ -19,7 +19,7 @@ export const SliderPresentation = styled.div`
     width: 100%;
 
     .swiper-container{
-    height:85vw;
+    height:90vw;
   }
   }
 `;

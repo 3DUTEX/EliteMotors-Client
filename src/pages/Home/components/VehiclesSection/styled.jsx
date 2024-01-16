@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { FONT_DEFAULT, PRIMARY_COLOR } from '../../../../styles/default';
+import { FONT_DEFAULT } from '../../../../styles/default';
 
 export const SectionVehicle = styled.section`
   display: flex;
@@ -8,7 +8,7 @@ export const SectionVehicle = styled.section`
   gap: 30px 0;
 
   width: 100%;
-  min-height: 100vh;
+  min-height: 90vh;
   padding: 30px;
 
   font-family: ${FONT_DEFAULT};
@@ -36,28 +36,11 @@ export const SectionVehicle = styled.section`
       width: 95%;
     }
   }
-/*
-  .swiper-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-  }
-
-  .swiper-button-next,
-  .swiper-button-prev {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-    border-radius: 50%;
-    background: ${PRIMARY_COLOR};
-    color: #fff !important;
-} */
 `;
 
 export const VehiclesContainer = styled.div`
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 0 10px;
 
