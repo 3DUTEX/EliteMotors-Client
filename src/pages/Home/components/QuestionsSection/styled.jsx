@@ -13,7 +13,7 @@ export const SectionQuestions = styled.section`
   font-family: ${FONT_DEFAULT};
   background: #000;
 
-  .title{
+  .title {
     width: 80%;
     margin: 0 auto;
 
@@ -30,6 +30,6 @@ export const QuestionsContainer = styled.div`
 
   background: #fff;
   border-radius: 8px;
-  box-shadow: rgba(0,0,0,0.1);
+  box-shadow: rgba(0, 0, 0, 0.1);
   overflow-y: auto;
 `;

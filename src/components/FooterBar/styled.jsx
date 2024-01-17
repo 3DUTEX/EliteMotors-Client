@@ -3,11 +3,11 @@ import { FONT_DEFAULT, PRIMARY_COLOR } from '../../styles/default';
 
 export const FooterBarSection = styled.section`
   width: 100%;
+  margin-top: 1px;
 
   font-size: 25px;
   font-family: ${FONT_DEFAULT};
   background: #000;
-  border-top: 1px solid #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 `;
 
@@ -97,6 +97,11 @@ export const FooterBarContainer = styled.div`
 
     .item-container {
       width: 100%;
+      gap: 20px 0;
+    }
+
+    .sub-title {
+      font-size: 30px;
     }
 
     .warning {
@@ -104,6 +109,19 @@ export const FooterBarContainer = styled.div`
 
       .exclamation {
         font-size: 50px;
+      }
+    }
+
+    .contact-list {
+      gap: 40px 0;
+
+      li {
+        flex-direction: column;
+      }
+
+      .icon {
+        font-size: 50px;
+        padding-bottom: 10px;
       }
     }
   }

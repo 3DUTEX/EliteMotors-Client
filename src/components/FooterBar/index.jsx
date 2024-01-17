@@ -31,15 +31,15 @@ export default function FooterBar() {
             </div>
             <ul className="contact-list">
               <li className="contact-item">
-                <FaEnvelope />
+                <FaEnvelope className="icon" />
                 eliteetecmotors@gmail.com
               </li>
               <li className="contact-item">
-                <FaPhone />
+                <FaPhone className="icon" />
                 (11) 969459786
               </li>
               <li className="contact-item">
-                <FaMapMarked />
+                <FaMapMarked className="icon" />
                 Rua Guaipá, 678 -Vila Leopoldina,SP
               </li>
             </ul>
