@@ -2,6 +2,7 @@
 import React from 'react';
 
 // Imports Modules
+import FooterBar from '../../components/FooterBar';
 import NavBar from '../../components/NavBar';
 import PresentationSection from './components/PresentationSection';
 import QuestionsSection from './components/QuestionsSection';
@@ -16,6 +17,7 @@ export default function Home() {
       <StepsSection />
       <VehiclesSection />
       <QuestionsSection />
+      <FooterBar />
     </>
   );
 }
