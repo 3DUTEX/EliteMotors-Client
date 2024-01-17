@@ -17,7 +17,7 @@ export default function Question({ id }) {
         opacity: 0,
       });
       gsap.to(`#arrow${id}`, {
-        rotate: '0',
+        rotate: '180',
       });
       return setIsShow(false);
     }
@@ -27,7 +27,7 @@ export default function Question({ id }) {
         opacity: 1,
       });
       gsap.to(`#arrow${id}`, {
-        rotate: '180',
+        rotate: '0',
       });
       return setIsShow(true);
     }
@@ -48,10 +48,9 @@ export default function Question({ id }) {
       </div>
       <div className="question-desc" id={`questionDesc${id}`}>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Iste itaque ut pariatur deserunt nam quam nobis.
-          Odit sed sint qui libero vero adipisci facilis, laborum minima esse, tempore, aliquam molestias.
-
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ut pariatur deserunt
+          nam quam nobis. Odit sed sint qui libero vero adipisci facilis, laborum minima esse,
+          tempore, aliquam molestias.
         </p>
       </div>
     </QuestionContainer>
