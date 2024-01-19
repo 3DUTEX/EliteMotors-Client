@@ -10,6 +10,12 @@ const initalState = {
 // eslint-disable-next-line default-param-last
 function reducer(state = initalState, action) {
   switch (action.type) {
+    case types.LOGIN_REQUEST: {
+      const newState = { ...state };
+      newState.isLoading = true;
+      return newState;
+    }
+
     case types.LOGIN_SUCCESS: {
       const { payload } = action;
       const newState = {

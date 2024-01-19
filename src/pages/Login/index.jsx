@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { useSelector } from 'react-redux';
 import { LoginSection } from './styled';
 
 import Loading from '../../components/Loading';
@@ -6,6 +7,7 @@ import LogIn from './components/LogIn';
 import Register from './components/Register';
 
 export default function Login() {
+  const { isLoading } = useSelector((state) => state.authReducer);
   const [logIn, setLogIn] = useState(true);
 
   const btnLoginRef = useRef();
@@ -27,7 +29,7 @@ export default function Login() {
 
   return (
     <LoginSection>
-      <Loading />
+      {isLoading && <Loading isBlock />}
       <div className="main-container">
         <div>
           <button
