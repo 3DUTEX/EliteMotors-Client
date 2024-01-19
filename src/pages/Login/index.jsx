@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { LoginSection } from './styled';
 
+import Loading from '../../components/Loading';
 import LogIn from './components/LogIn';
 import Register from './components/Register';
 
@@ -26,6 +27,7 @@ export default function Login() {
 
   return (
     <LoginSection>
+      <Loading />
       <div className="main-container">
         <div>
           <button
