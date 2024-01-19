@@ -46,14 +46,13 @@ export const CustomButton = styled.button`
   background: ${PRIMARY_COLOR};
   color: #fff;
   border: none;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   transition: 250ms;
   cursor: pointer;
 
-  &:hover{
+  &:hover {
     background: ${PRIMARY_DARK_COLOR};
   }
 `;
-
 export default GlobalStyles;

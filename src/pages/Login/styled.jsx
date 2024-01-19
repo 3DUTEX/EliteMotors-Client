@@ -1,13 +1,7 @@
 import styled from 'styled-components';
 
 import { FONT_DEFAULT, PRIMARY_COLOR } from '../../styles/default';
-
-const mixinFlex = (flexD = 'row', justifyC = 'initial', alignI = 'initial', gap = '0') => `
-    display: flex;
-    flex-direction: ${flexD};
-    justify-content: ${justifyC};
-    align-items: ${alignI};
-  `;
+import { mixinFlex } from '../../styles/mixins';
 
 export const LoginSection = styled.section`
   ${mixinFlex('row', 'center', 'center')}
@@ -21,7 +15,7 @@ export const LoginSection = styled.section`
   .main-container {
     ${mixinFlex('column', 'inital', 'inital')}
     width: 50%;
-    min-height: 70vh;
+    height: 70vh;
 
     background: #fff;
     border-radius: 8px;
@@ -41,6 +35,7 @@ export const LoginSection = styled.section`
     }
 
     .not-selected {
+      border: 1px solid rgba(0, 0, 0, 0.1);
       background: #f4f4f4;
       color: #bebebe;
 
@@ -53,6 +48,7 @@ export const LoginSection = styled.section`
     .selected {
       color: ${PRIMARY_COLOR};
       background: #fff;
+      pointer-events: none;
     }
 
     .radius-left {
@@ -61,6 +57,18 @@ export const LoginSection = styled.section`
 
     .radius-right {
       border-radius: 0 8px 0 0;
+    }
+  }
+
+  @media (max-width: 1220px) {
+    .main-container {
+      width: 70%;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .main-container {
+      width: 90%;
     }
   }
 `;

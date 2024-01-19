@@ -31,18 +31,17 @@ export default function Mobile() {
         <FaBars size={30} onClick={showMenu} className="option" />
       </MobileContainer>
       {menu && (
-      <Menu show={show}>
-        <ul>
-          <li>
-            <FaUserCircle size={100} />
-          </li>
-          <li className="option">Home</li>
-          <li className="option">Contato</li>
-          <li className="option">Locais</li>
-        </ul>
-      </Menu>
+        <Menu show={show}>
+          <ul>
+            <li>
+              <FaUserCircle size={100} />
+            </li>
+            <li className="option">Home</li>
+            <li className="option">Contato</li>
+            <li className="option">Locais</li>
+          </ul>
+        </Menu>
       )}
     </>
-
   );
 }

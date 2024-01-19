@@ -1,6 +1,9 @@
 import React, { useRef, useState } from 'react';
 import { LoginSection } from './styled';
 
+import LogIn from './components/LogIn';
+import Register from './components/Register';
+
 export default function Login() {
   const [logIn, setLogIn] = useState(true);
 
@@ -42,7 +45,7 @@ export default function Login() {
             Registrar
           </button>
         </div>
-        {logIn ? <h1>Login</h1> : <h1>Register</h1>}
+        {logIn ? <LogIn /> : <Register />}
       </div>
     </LoginSection>
   );
