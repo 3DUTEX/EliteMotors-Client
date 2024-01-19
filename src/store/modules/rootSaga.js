@@ -1,8 +1,8 @@
 import { all } from 'redux-saga/effects';
 
-import exampleSaga from './example/sagas';
+import authSaga from './auth/sagas';
 
 // Combinando as sagas em uma saga principal
 export default function* rootSaga() {
-  return yield all([exampleSaga]);
+  return yield all([authSaga]);
 }

@@ -1,3 +1,5 @@
-export const COUNT_INCREMENT = 'COUNT_INCREMENT';
+export const LOGIN_REQUEST = 'LOGIN_REQUEST';
 
-export const API_REQUEST = 'API_REQUEST';
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+
+export const LOGIN_FAILURE = 'LOGIN_FAILURE';

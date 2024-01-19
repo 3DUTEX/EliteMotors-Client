@@ -25,5 +25,6 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'no-unused-vars': 'off',
     'jsx-no-bind': 'off',
+    'import/no-extraneous-dependencies': 'off',
   },
 };

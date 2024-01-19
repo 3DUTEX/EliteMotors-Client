@@ -7,10 +7,10 @@ import React from 'react';
 // Imports Modules
 import { InputContainer } from './styled';
 
-export default function CustomInput({ label, ...rest }) {
+export default function CustomInput({ label, reference }) {
   return (
     <InputContainer>
-      <input {...rest} required />
+      <input type="text" ref={reference} required />
       <label>{label}</label>
     </InputContainer>
   );
@@ -18,4 +18,5 @@ export default function CustomInput({ label, ...rest }) {
 
 CustomInput.propTypes = {
   label: PropTypes.string.isRequired,
+  reference: PropTypes.shape().isRequired,
 };
