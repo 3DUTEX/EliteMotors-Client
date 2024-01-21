@@ -16,6 +16,11 @@ const GlobalStyles = createGlobalStyle`
     list-style: none;
   }
 
+  a{
+    color: inherit;
+    text-decoration: none;
+  }
+
     /* width */
   ::-webkit-scrollbar {
     width: 10px;

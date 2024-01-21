@@ -29,7 +29,7 @@ export default function Login() {
 
   return (
     <LoginSection>
-      {isLoading && <Loading isBlock />}
+      {isLoading && <Loading blocked />}
       <div className="main-container">
         <div>
           <button
@@ -49,7 +49,7 @@ export default function Login() {
             Registrar
           </button>
         </div>
-        {logIn ? <LogIn /> : <Register />}
+        {logIn ? <LogIn /> : <Register changeOption={changeOption} />}
       </div>
     </LoginSection>
   );

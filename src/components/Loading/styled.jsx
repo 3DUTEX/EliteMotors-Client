@@ -15,19 +15,19 @@ function isBlocked() {
 
 export const LoadingDiv = styled.div`
   ${mixinFlex('row', 'center', 'center')}
-  ${({ isBlock }) => (isBlock && isBlocked)}
+  ${({ blocked }) => blocked && isBlocked}
 
-  .loading{
+  .loading {
     width: 45px;
     height: 45px;
     border: 10px solid #000;
     border-top-color: transparent;
     border-radius: 50%;
-    animation: loading 650ms linear infinite ;
+    animation: loading 650ms linear infinite;
   }
 
-  @keyframes loading{
-    to{
+  @keyframes loading {
+    to {
       transform: rotate(360deg);
     }
   }

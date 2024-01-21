@@ -3,6 +3,7 @@ import React from 'react';
 import { FaUserCircle } from 'react-icons/fa';
 
 // Imports Modules
+import { Link } from 'react-router-dom';
 import { DesktopContainer, LogoContainer } from './styled';
 
 export default function Desktop() {
@@ -19,10 +20,10 @@ export default function Desktop() {
           <li className="option">option4</li>
         </ul>
       </div>
-      <div className="login-container">
+      <Link to="/login" className="login-container">
         <p>Entrar</p>
         <FaUserCircle size={40} />
-      </div>
+      </Link>
     </DesktopContainer>
   );
 }

@@ -1,21 +1,22 @@
+// Imports Libs
+import PropTypes from 'prop-types';
 import React from 'react';
 
-import PropTypes from 'prop-types';
-
+// Imports Modules
 import { LoadingDiv } from './styled';
 
-export default function Loading({ isBlock }) {
+export default function Loading({ blocked }) {
   return (
-    <LoadingDiv isBlock={isBlock}>
+    <LoadingDiv blocked={blocked}>
       <div className="loading" />
     </LoadingDiv>
   );
 }
 
 Loading.defaultProps = {
-  isBlock: false,
+  blocked: false,
 };
 
 Loading.propTypes = {
-  isBlock: PropTypes.bool,
+  blocked: PropTypes.bool,
 };
