@@ -19,7 +19,7 @@ export default function LogIn() {
   // Animação ao carregar componente
   useLayoutEffect(() => {
     gsap.fromTo(
-      '.form-logIn',
+      '.login-container',
       {
         y: '50px',
         opacity: 0,
@@ -44,12 +44,11 @@ export default function LogIn() {
   }
 
   return (
-    <LogInContainer>
+    <LogInContainer className="login-container">
+      <h2>Logar</h2>
       <form className="form-logIn" onSubmit={handleSubmit} noValidate>
-        <h2>Logar</h2>
         <CustomInput reference={emailRef} label="Email" />
         <CustomInput reference={passwordRef} label="Senha" />
-        <CustomInput reference={emailRef} label="Email" />
         <CustomButton>Logar</CustomButton>
       </form>
     </LogInContainer>

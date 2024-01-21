@@ -1,26 +1,27 @@
 // Imports Libs
 import gsap from 'gsap';
 import PropTypes from 'prop-types';
-import React, { useLayoutEffect, useRef, useState } from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
+import { useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
 import { isEmail } from 'validator';
 
 // Imports Modules;
 import CustomInput from '../../../../components/CustomInput';
-import Loading from '../../../../components/Loading';
 import axios from '../../../../services/axios';
+import * as authActions from '../../../../store/modules/auth/actions';
 import { CustomButton } from '../../../../styles';
 import { RegisterContainer } from './styled';
 
 export default function Register({ changeOption }) {
-  const [isLoading, setIsLoading] = useState(false);
+  const dispatch = useDispatch();
   const nameRef = useRef();
   const emailRef = useRef();
   const passwordRef = useRef();
 
   useLayoutEffect(() => {
     gsap.fromTo(
-      '.form-register',
+      '.register-container',
       {
         y: '50px',
         opacity: 0,
@@ -34,7 +35,7 @@ export default function Register({ changeOption }) {
   }, []);
 
   async function handleSubmit(e) {
-    setIsLoading(true);
+    dispatch(authActions.changeLoading({ isLoading: true }));
     e.preventDefault();
 
     const name = nameRef.current.value;
@@ -51,22 +52,29 @@ export default function Register({ changeOption }) {
       return toast.error('A senha não pode estar vazia e deve conter no máximo 60 caracteres');
     }
 
-    const { data, status } = await axios.post('/users', { name, email, password });
+    try {
+      const { data, status } = await axios.post('/users', { name, email, password });
 
-    setIsLoading(false);
-    if (status === 201) {
-      toast.success('Conta criada com sucesso');
-      changeOption();
+      if (status === 201) {
+        toast.success('Conta criada com sucesso');
+        changeOption();
+      }
+    } catch (err) {
+      const { data } = err.response;
+      if (data.error) {
+        const { message } = data.error;
+        toast.error(message);
+      }
+    } finally {
+      dispatch(authActions.changeLoading({ isLoading: false }));
     }
-
     return null;
   }
 
   return (
-    <RegisterContainer>
-      {isLoading && <Loading blocked />}
+    <RegisterContainer className="register-container">
+      <h2>Registrar</h2>
       <form className="form-register" onSubmit={handleSubmit} noValidate>
-        <h2>Registrar</h2>
         <CustomInput reference={nameRef} label="Nome" type="text" />
         <CustomInput reference={emailRef} label="Email" type="text" />
         <CustomInput reference={passwordRef} label="Senha" type="text" />

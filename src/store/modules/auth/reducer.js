@@ -31,6 +31,16 @@ function reducer(state = initalState, action) {
       return initalState;
     }
 
+    case types.CHANGE_LOADING_AUTH: {
+      const { payload } = action;
+      const newState = { ...state };
+      if (payload.isLoading === true || payload.isLoading === false) {
+        newState.isLoading = payload.isLoading;
+      }
+
+      return newState;
+    }
+
     // eslint-disable-next-line no-fallthrough
     default: { return state; }
   }
