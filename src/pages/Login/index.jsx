@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-bind */
 import React, { useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { LoginSection } from './styled';

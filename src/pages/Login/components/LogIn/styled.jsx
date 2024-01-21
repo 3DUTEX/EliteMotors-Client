@@ -7,11 +7,12 @@ export const LogInContainer = styled.div`
 
   width: 100%;
   height: calc(70vh - 75px);
-  overflow-y: auto;
 
   form {
-    ${mixinFlex('column', 'center', 'center', '15px 0')}
+    ${mixinFlex('column', 'inital', 'center', '15px 0')}
+    padding: 10px;
     width: 50%;
+    overflow-y: auto;
   }
 
   @media (max-width: 720px) {

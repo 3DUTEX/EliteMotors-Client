@@ -49,6 +49,7 @@ export default function LogIn() {
         <h2>Logar</h2>
         <CustomInput reference={emailRef} label="Email" />
         <CustomInput reference={passwordRef} label="Senha" />
+        <CustomInput reference={emailRef} label="Email" />
         <CustomButton>Logar</CustomButton>
       </form>
     </LogInContainer>

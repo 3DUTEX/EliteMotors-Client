@@ -60,6 +60,17 @@ export const LoginSection = styled.section`
     }
   }
 
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #fff;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: ${PRIMARY_COLOR};
+    border-radius: 8px;
+  }
+
   @media (max-width: 1220px) {
     .main-container {
       width: 70%;
