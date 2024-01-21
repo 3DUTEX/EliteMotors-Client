@@ -1,9 +1,10 @@
 // Imports Libs
 import gsap from 'gsap';
-import React, { useLayoutEffect, useRef } from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useEffect, useLayoutEffect, useRef } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 // Imports Modules
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import isEmail from 'validator/lib/isEmail';
 import CustomInput from '../../../../components/CustomInput';
@@ -12,9 +13,15 @@ import { CustomButton } from '../../../../styles';
 import { LogInContainer } from './styled';
 
 export default function LogIn() {
+  const navigate = useNavigate();
+  const isLoggedIn = useSelector((state) => state.authReducer.isLoggedIn);
   const dispatch = useDispatch();
   const emailRef = useRef();
   const passwordRef = useRef();
+
+  useEffect(() => {
+    if (isLoggedIn) navigate('/', { replace: true });
+  }, [isLoggedIn]);
 
   // Animação ao carregar componente
   useLayoutEffect(() => {

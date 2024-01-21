@@ -1,12 +1,23 @@
 // Imports Libs
 import React from 'react';
-import { FaUserCircle } from 'react-icons/fa';
+import { FaSignInAlt, FaUserCircle } from 'react-icons/fa';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 // Imports Modules
-import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import * as authActions from '../../../../store/modules/auth/actions';
 import { DesktopContainer, LogoContainer } from './styled';
 
 export default function Desktop() {
+  const isLoggedIn = useSelector((state) => state.authReducer.isLoggedIn);
+  const dispatch = useDispatch();
+
+  function loggout() {
+    dispatch(authActions.loginFailure());
+    toast.success('Loggout efetuado com sucesso');
+  }
+
   return (
     <DesktopContainer>
       <LogoContainer>
@@ -20,10 +31,17 @@ export default function Desktop() {
           <li className="option">option4</li>
         </ul>
       </div>
-      <Link to="/login" className="login-container">
-        <p>Entrar</p>
-        <FaUserCircle size={40} />
-      </Link>
+      {isLoggedIn ? (
+        <div className="login-container" onClick={loggout}>
+          <p>Sair</p>
+          <FaSignInAlt size={30} />
+        </div>
+      ) : (
+        <Link to="/login" className="login-container">
+          <p>Entrar</p>
+          <FaUserCircle size={40} />
+        </Link>
+      )}
     </DesktopContainer>
   );
 }
