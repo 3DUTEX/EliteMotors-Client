@@ -1,13 +1,22 @@
 // Imports Libs
 import React, { useState } from 'react';
-import { FaBars, FaUserCircle } from 'react-icons/fa';
+import { FaBars } from 'react-icons/fa';
 
 // Imports Modules
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import * as authActions from '../../../../store/modules/auth/actions';
 import { Menu, MobileContainer } from './styled';
 
 export default function Mobile() {
+  const dispatch = useDispatch();
+  const isLoggedIn = useSelector((state) => state.authReducer.isLoggedIn);
   const [menu, setMenu] = useState(false);
   const [show, setShow] = useState(false);
+
+  function loggout() {
+    dispatch(authActions.loginFailure());
+  }
 
   function showMenu() {
     if (menu) {
@@ -33,9 +42,15 @@ export default function Mobile() {
       {menu && (
         <Menu show={show}>
           <ul>
-            <li>
-              <FaUserCircle size={100} />
-            </li>
+            {isLoggedIn ? (
+              <li className="option" onClick={loggout}>
+                Sair
+              </li>
+            ) : (
+              <Link to="/login">
+                <li className="option">Entrar</li>
+              </Link>
+            )}
             <li className="option">Home</li>
             <li className="option">Contato</li>
             <li className="option">Locais</li>
