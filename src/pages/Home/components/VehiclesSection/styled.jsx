@@ -14,25 +14,25 @@ export const SectionVehicle = styled.section`
   font-family: ${FONT_DEFAULT};
   background: #f1f1f1;
 
-  h2{
+  h2 {
     width: 80%;
     margin: 0 auto;
     font-size: 40px;
   }
 
-  .btn-see-all{
+  .btn-see-all {
     margin: 0 auto;
     width: 80%;
   }
 
-  @media (max-width: 720px){
+  @media (max-width: 720px) {
     padding: 20px;
 
-    h2{
+    h2 {
       width: 95%;
     }
 
-    .btn-see-all{
+    .btn-see-all {
       width: 95%;
     }
   }
@@ -47,12 +47,12 @@ export const VehiclesContainer = styled.div`
   width: 80%;
   margin: 0 auto;
 
-  @media (max-width: 1280px){
+  @media (max-width: 1280px) {
     flex-wrap: wrap;
     gap: 30px 0;
   }
 
-  @media (max-width: 720px){
+  @media (max-width: 720px) {
     width: 95%;
   }
 `;
