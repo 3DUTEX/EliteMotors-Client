@@ -1,10 +1,11 @@
 // Imports Libs
 import React, { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
-
-// Imports Modules
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
+
+// Imports Modules
 import * as authActions from '../../../../store/modules/auth/actions';
 import { Menu, MobileContainer } from './styled';
 
@@ -16,6 +17,7 @@ export default function Mobile() {
 
   function loggout() {
     dispatch(authActions.loginFailure());
+    toast.success('Loggout efetuado com sucesso');
   }
 
   function showMenu() {
@@ -51,7 +53,9 @@ export default function Mobile() {
                 <li className="option">Entrar</li>
               </Link>
             )}
-            <li className="option">Home</li>
+            <Link to="/vehicles/all">
+              <li className="option">Veiculos</li>
+            </Link>
             <li className="option">Contato</li>
             <li className="option">Locais</li>
           </ul>

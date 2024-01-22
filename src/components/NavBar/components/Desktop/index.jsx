@@ -3,9 +3,9 @@ import React from 'react';
 import { FaSignInAlt, FaUserCircle } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 // Imports Modules
-import { toast } from 'react-toastify';
 import * as authActions from '../../../../store/modules/auth/actions';
 import { DesktopContainer, LogoContainer } from './styled';
 
@@ -25,7 +25,9 @@ export default function Desktop() {
       </LogoContainer>
       <div className="options">
         <ul>
-          <li className="option">Home</li>
+          <Link to="/vehicles/all">
+            <li className="option">Veiculos</li>
+          </Link>
           <li className="option">Contato</li>
           <li className="option">Locais</li>
           <li className="option">option4</li>
