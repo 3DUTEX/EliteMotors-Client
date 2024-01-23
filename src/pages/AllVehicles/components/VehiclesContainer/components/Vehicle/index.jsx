@@ -1,4 +1,5 @@
 // Imports Libs
+import PropTypes from 'prop-types';
 import React from 'react';
 import { FaExclamationCircle } from 'react-icons/fa';
 
@@ -7,7 +8,7 @@ import { CustomButton } from '../../../../../../styles';
 import { VehicleContainer } from './styled';
 
 export default function Vehicle({ name, brand, price, images }) {
-  const USDollar = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
+  const BRL = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
 
   return (
     <VehicleContainer>
@@ -20,7 +21,7 @@ export default function Vehicle({ name, brand, price, images }) {
         <li>{name}</li>
         <li>{brand}</li>
         <li>
-          <span className="price-vehicle">{USDollar.format(price)}</span>
+          <span className="price-vehicle">{BRL.format(price)}</span>
         </li>
       </ul>
       <div className="see-more-btn">
@@ -29,3 +30,10 @@ export default function Vehicle({ name, brand, price, images }) {
     </VehicleContainer>
   );
 }
+
+Vehicle.propTypes = {
+  name: PropTypes.string.isRequired,
+  brand: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  images: PropTypes.arrayOf(PropTypes.shape()).isRequired,
+};

@@ -17,7 +17,6 @@ export default function VehiclesContainer() {
         setIsLoading(true);
         const { data } = await axios.get('/vehicles');
         setVehicles(data);
-        console.log(data);
       } catch (e) {
         console.log(e);
       } finally {
@@ -33,6 +32,7 @@ export default function VehiclesContainer() {
       {isLoading && <Loading />}
       {vehicles.map((vehicle) => (
         <Vehicle
+          key={vehicle.id}
           name={vehicle.name}
           brand={vehicle.brand}
           price={vehicle.price}
