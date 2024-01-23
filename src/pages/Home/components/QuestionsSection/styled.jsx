@@ -9,6 +9,7 @@ export const SectionQuestions = styled.section`
 
   width: 100%;
   min-height: 100vh;
+  padding: 100px 0;
 
   font-family: ${FONT_DEFAULT};
   background: #000;

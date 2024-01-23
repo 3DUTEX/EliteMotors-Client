@@ -25,10 +25,12 @@ export default function Desktop() {
       </LogoContainer>
       <div className="options">
         <ul>
+          <Link to="/">
+            <li className="option">Home</li>
+          </Link>
           <Link to="/vehicles/all">
             <li className="option">Veiculos</li>
           </Link>
-          <li className="option">Contato</li>
           <li className="option">Locais</li>
           <li className="option">option4</li>
         </ul>

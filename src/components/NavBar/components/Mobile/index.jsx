@@ -53,6 +53,9 @@ export default function Mobile() {
                 <li className="option">Entrar</li>
               </Link>
             )}
+            <Link to="/">
+              <li className="option">Home</li>
+            </Link>
             <Link to="/vehicles/all">
               <li className="option">Veiculos</li>
             </Link>

@@ -7,7 +7,7 @@ import { FaArrowUp } from 'react-icons/fa';
 // Imports modules
 import { QuestionContainer } from './styled';
 
-export default function Question({ id }) {
+export default function Question({ id, title, desc }) {
   const [isShow, setIsShow] = useState(false);
 
   function handleClick() {
@@ -37,7 +37,7 @@ export default function Question({ id }) {
   return (
     <QuestionContainer>
       <div className="question-title" id={`questionTitle${id}`}>
-        <h2>Question title</h2>
+        <h2>{title}</h2>
         <FaArrowUp
           size={30}
           cursor="pointer"
@@ -47,11 +47,7 @@ export default function Question({ id }) {
         />
       </div>
       <div className="question-desc" id={`questionDesc${id}`}>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste itaque ut pariatur deserunt
-          nam quam nobis. Odit sed sint qui libero vero adipisci facilis, laborum minima esse,
-          tempore, aliquam molestias.
-        </p>
+        <p>{desc}</p>
       </div>
     </QuestionContainer>
   );
@@ -59,4 +55,6 @@ export default function Question({ id }) {
 
 Question.propTypes = {
   id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
 };
