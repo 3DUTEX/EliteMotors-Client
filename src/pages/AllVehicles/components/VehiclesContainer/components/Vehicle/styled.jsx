@@ -39,4 +39,13 @@ export const VehicleContainer = styled.div`
     width: inherit;
     padding: 0 10px;
   }
+
+  @media (max-width: 720px) {
+    width: 100%;
+    height: 500px;
+
+    .image-vehicle {
+      height: 300px;
+    }
+  }
 `;
