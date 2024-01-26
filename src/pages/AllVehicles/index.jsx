@@ -1,5 +1,5 @@
 // Imports Libs
-import React from 'react';
+import React, { useEffect } from 'react';
 
 // Imports Modules
 import FooterBar from '../../components/FooterBar';
@@ -8,6 +8,10 @@ import VehiclesContainer from './components/VehiclesContainer/index.jsx';
 import { AllVehiclesSection } from './styled.jsx';
 
 export default function AllVehicles() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <NavBar />

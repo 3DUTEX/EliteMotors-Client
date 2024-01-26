@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AllVehicles from '../pages/AllVehicles';
 import Home from '../pages/Home';
 import Login from '../pages/Login';
+import OneVehicle from '../pages/OneVehicle';
 
 export default function RoutesConfig() {
   return (
@@ -13,8 +14,10 @@ export default function RoutesConfig() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/vehicles/all" element={<AllVehicles />} />
+        <Route path="/vehicles">
+          <Route path="all" element={<AllVehicles />} />
+          <Route path=":id" element={<OneVehicle />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
