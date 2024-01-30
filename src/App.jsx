@@ -1,4 +1,5 @@
 // Imports Libs
+import { GoogleOAuthProvider } from '@react-oauth/google';
 import React from 'react';
 import { Provider } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
@@ -14,9 +15,11 @@ function App() {
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <RoutesConfig />
-        <GlobalStyles />
-        <ToastContainer />
+        <GoogleOAuthProvider clientId="404317237330-tjvhbpdfpq6qqfptlt228h072k5b28bk.apps.googleusercontent.com">
+          <RoutesConfig />
+          <GlobalStyles />
+          <ToastContainer />
+        </GoogleOAuthProvider>
       </PersistGate>
     </Provider>
   );

@@ -15,7 +15,18 @@ import * as authActions from './actions';
 
 function* loginRequest({ payload }) {
   try {
-    const { data } = yield call(axios.post, '/auth', payload);
+    let data;
+
+    // Verifica se a login request é google ou não
+    if (payload.credential) {
+      // Conta google
+      const response = yield call(axios.post, '/auth/google', payload);
+      data = response.data;
+    } else {
+      const response = yield call(axios.post, '/auth', payload);
+      data = response.data;
+    }
+
     yield put(authActions.loginSuccess(data));
     toast.success('Login efetuado com sucesso');
   } catch (e) {

@@ -1,12 +1,13 @@
 // Imports Libs
+import { GoogleLogin } from '@react-oauth/google';
 import gsap from 'gsap';
 import React, { useEffect, useLayoutEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-
-// Imports Modules
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import isEmail from 'validator/lib/isEmail';
+
+// Imports Modules
 import CustomInput from '../../../../components/CustomInput';
 import * as authActions from '../../../../store/modules/auth/actions';
 import { CustomButton } from '../../../../styles';
@@ -14,8 +15,8 @@ import { LogInContainer } from './styled';
 
 export default function LogIn() {
   const navigate = useNavigate();
-  const isLoggedIn = useSelector((state) => state.authReducer.isLoggedIn);
   const dispatch = useDispatch();
+  const isLoggedIn = useSelector((state) => state.authReducer.isLoggedIn);
   const emailRef = useRef();
   const passwordRef = useRef();
 
@@ -50,10 +51,22 @@ export default function LogIn() {
     return dispatch(authActions.loginRequest({ email, password }));
   }
 
+  function handleSuccessGoogle(credentialResponse) {
+    dispatch(authActions.loginRequest({ credential: credentialResponse.credential }));
+  }
+
   return (
     <LogInContainer className="login-container">
       <h2>Logar</h2>
       <form className="form-logIn" onSubmit={handleSubmit} noValidate>
+        <GoogleLogin
+          onSuccess={(credentialResponse) => {
+            handleSuccessGoogle(credentialResponse);
+          }}
+          onError={() => {
+            console.log('Login Failed');
+          }}
+        />
         <CustomInput reference={emailRef} label="Email" />
         <CustomInput reference={passwordRef} label="Senha" />
         <CustomButton>Logar</CustomButton>
