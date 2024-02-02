@@ -36,12 +36,11 @@ export default function Question({ id, title, desc }) {
 
   return (
     <QuestionContainer>
-      <div className="question-title" id={`questionTitle${id}`}>
+      <div className="question-title" id={`questionTitle${id}`} onClick={handleClick}>
         <h2>{title}</h2>
         <FaArrowUp
           size={30}
           cursor="pointer"
-          onClick={handleClick}
           className="arrow"
           id={`arrow${id}`}
         />

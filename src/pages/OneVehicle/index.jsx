@@ -59,25 +59,25 @@ export default function OneVehicle() {
         <div className="main-container">
           {!loading && (
           <div className="images-vehicle">
-            {vehicle.images ? (
+            {vehicle.images && vehicle.images.length > 0 ? (
               <div>
                 <img src={vehicle.images[0].url} alt="imagem de um carro" className="main-image" />
                 <div className="other-images">
                   {vehicle.images.map(
-                    (image, index) => index !== 0 && (
-                    <img
-                      src={image.url}
-                      alt="imagem de um carro"
-                      onClick={() => {
-                        changeMainImage(index);
-                      }}
-                    />
+                    (image, index) => (
+                      <img
+                        src={image.url}
+                        alt="imagem de um carro"
+                        onClick={() => {
+                          changeMainImage(index);
+                        }}
+                      />
                     ),
                   )}
                 </div>
               </div>
             ) : (
-              <FaExclamationCircle />
+              <FaExclamationCircle className="main-image" />
             )}
           </div>
           )}

@@ -33,6 +33,7 @@ export default function VehiclesContainer() {
       {vehicles.map((vehicle) => (
         <Vehicle
           key={vehicle.id}
+          id={vehicle.id}
           name={vehicle.name}
           brand={vehicle.brand}
           price={vehicle.price}
