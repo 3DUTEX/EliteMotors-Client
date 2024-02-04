@@ -3,7 +3,9 @@
 // Imports Libs
 import React, { useEffect, useState } from 'react';
 import { FaExclamationCircle } from 'react-icons/fa';
-import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 // Imports Modules
 import FooterBar from '../../components/FooterBar';
@@ -14,10 +16,14 @@ import { CustomButton } from '../../styles/index';
 import { OneVehicleSection } from './styled';
 
 export default function OneVehicle() {
+  const isLoggedIn = useSelector((state) => state.authReducer.isLoggedIn);
+  const navigate = useNavigate();
+  const location = useLocation();
   const [loading, setLoading] = useState(false);
   const [vehicle, setVehicle] = useState({});
   const { id } = useParams();
 
+  // Get vehicle of URL
   useEffect(() => {
     window.scrollTo(0, 0);
     async function getVehicle() {
@@ -50,6 +56,16 @@ export default function OneVehicle() {
 
     newVehicle.images = newOrderImages;
     setVehicle(newVehicle); // substituindo
+  }
+
+  // Click on button "reserva"
+  function handleClickButton() {
+    if (isLoggedIn) {
+      navigate('/reservations/create', { state: { idVehicle: id } });
+    } else {
+      toast.error('Login necessário');
+      navigate('/login', { state: { prevPath: location.pathname } });
+    }
   }
 
   return (
@@ -100,7 +116,7 @@ export default function OneVehicle() {
                 {' '}
                 <span className="price-vehicle">{BRL.format(vehicle.price)}</span>
               </h3>
-              <CustomButton padding="18px">Reservar</CustomButton>
+              <CustomButton padding="18px" onClick={handleClickButton}>Reservar</CustomButton>
             </div>
           )}
 

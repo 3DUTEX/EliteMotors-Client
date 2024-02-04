@@ -1,9 +1,10 @@
+/* eslint-disable consistent-return */
 // Imports Libs
 import { GoogleLogin } from '@react-oauth/google';
 import gsap from 'gsap';
 import React, { useEffect, useLayoutEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import isEmail from 'validator/lib/isEmail';
 
@@ -14,6 +15,7 @@ import { CustomButton } from '../../../../styles';
 import { LogInContainer } from './styled';
 
 export default function LogIn() {
+  const location = useLocation();
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const isLoggedIn = useSelector((state) => state.authReducer.isLoggedIn);
@@ -21,7 +23,10 @@ export default function LogIn() {
   const passwordRef = useRef();
 
   useEffect(() => {
-    if (isLoggedIn) navigate('/', { replace: true });
+    if (isLoggedIn) {
+      if (!location.state) return navigate('/', { replace: true }); // se não tiver caminho anterior
+      if (location.state.prevPath) return navigate(location.state.prevPath, { replace: true });
+    }
   }, [isLoggedIn]);
 
   // Animação ao carregar componente
