@@ -14,6 +14,10 @@ export const QuestionContainer = styled.div`
   .question-title {
     display: flex;
     justify-content: space-between;
+
+    h2 {
+      width: 70%;
+    }
   }
 
   .question-desc {
@@ -35,5 +39,19 @@ export const QuestionContainer = styled.div`
   ::-webkit-scrollbar-thumb {
     border-radius: 8px;
     background: #000;
+  }
+
+  @media (max-width: 720px) {
+    .question-title {
+      h2 {
+        font-size: 20px;
+      }
+    }
+
+    .question-desc {
+      p {
+        font-size: 20px;
+      }
+    }
   }
 `;

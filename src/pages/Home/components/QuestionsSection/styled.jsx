@@ -21,6 +21,12 @@ export const SectionQuestions = styled.section`
     color: #fff;
     font-size: 50px;
   }
+
+  @media (max-width: 720px) {
+    .title {
+      width: 90%;
+    }
+  }
 `;
 
 export const QuestionsContainer = styled.div`
@@ -33,4 +39,8 @@ export const QuestionsContainer = styled.div`
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.1);
   overflow-y: auto;
+
+  @media (max-width: 720px) {
+    width: 95%;
+  }
 `;

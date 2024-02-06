@@ -53,9 +53,10 @@ export default function FooterBar() {
               </h3>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, facilis odit
-              sequi libero id molestias magni ut, soluta quaerat autem natus repellendus? Distinctio
-              hic voluptate, temporibus nisi praesentium a aut?
+              Bem-vindo à Elite Motors, onde a paixão por automóveis encontra o compromisso
+              com a excelência. Desde a nossa fundação,
+              temos o orgulho de ser uma referência no setor
+              automotivo, oferecendo aos nossos clientes uma experiência única e inesquecível.
             </p>
           </div>
         </div>

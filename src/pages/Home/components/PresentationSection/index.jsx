@@ -31,10 +31,11 @@ export default function PresentationSection() {
         <div className="text-container">
           <h1>Obtenha Já</h1>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Pariatur atque nemo dignissimos rem necessitatibus,
-            minus aspernatur molestiae, numquam provident dolores debitis deserunt veniam?
-            Aperiam, perferendis? Modi omnis natus facere soluta?
+            Surpreenda-se com a potência dos motores de última geração,
+            aprimorados para proporcionar um desempenho superior e uma
+            eficiência incrível. A tecnologia de ponta integrada em cada
+            veículo oferece conectividade intuitiva, sistemas avançados de
+            assistência ao condutor e entretenimento de alta qualidade.
           </p>
         </div>
         {/* <div className="image-container">

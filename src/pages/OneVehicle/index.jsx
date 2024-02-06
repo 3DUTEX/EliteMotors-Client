@@ -61,7 +61,7 @@ export default function OneVehicle() {
   // Click on button "reserva"
   function handleClickButton() {
     if (isLoggedIn) {
-      navigate('/reservations/create', { state: { idVehicle: id } });
+      // TODO create reservation
     } else {
       toast.error('Login necessário');
       navigate('/login', { state: { prevPath: location.pathname } });
@@ -82,6 +82,7 @@ export default function OneVehicle() {
                   {vehicle.images.map(
                     (image, index) => (
                       <img
+                        key={image.id}
                         src={image.url}
                         alt="imagem de um carro"
                         onClick={() => {

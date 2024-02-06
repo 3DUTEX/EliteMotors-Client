@@ -15,7 +15,8 @@ export const OneVehicleSection = styled.section`
     ${mixinFlex('row', 'center', 'center', '0 30px')};
     max-width: 95%;
     min-height: inherit;
-    margin: 20px auto;
+    margin: 0 auto;
+    padding: 20px 0;
   }
 
   .details-vehicle {
@@ -74,7 +75,8 @@ export const OneVehicleSection = styled.section`
     ${mixinFlex('column', 'center', 'center', '0 30px')};
     max-width: 95%;
     min-height: inherit;
-    margin: 20px auto;
+    margin: 0 auto;
+    padding: 20px 0;
 
     .details-vehicle {
       width: 100%;

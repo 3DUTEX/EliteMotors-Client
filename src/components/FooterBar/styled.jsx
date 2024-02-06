@@ -3,7 +3,6 @@ import { FONT_DEFAULT, PRIMARY_COLOR } from '../../styles/default';
 
 export const FooterBarSection = styled.footer`
   width: 100%;
-  margin-top: 1px;
 
   font-size: 25px;
   font-family: ${FONT_DEFAULT};
