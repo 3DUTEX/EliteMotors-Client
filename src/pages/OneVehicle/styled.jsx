@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { FONT_DEFAULT } from '../../styles/default';
+import { FONT_DEFAULT, PRIMARY_COLOR } from '../../styles/default';
 import { mixinFlex } from '../../styles/mixins';
 
 export const OneVehicleSection = styled.section`
@@ -67,6 +67,20 @@ export const OneVehicleSection = styled.section`
       width: 25%;
       height: 200px;
       object-fit: cover;
+    }
+  }
+
+  .input-date {
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-size: 20px;
+    font-family: ${FONT_DEFAULT};
+    cursor: pointer;
+
+    &:focus {
+      outline: 1px solid ${PRIMARY_COLOR};
     }
   }
 
