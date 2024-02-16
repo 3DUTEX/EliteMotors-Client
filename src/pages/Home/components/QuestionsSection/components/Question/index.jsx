@@ -24,8 +24,11 @@ export default function Question({ id, title, desc }) {
       return setIsShow(false);
     }
     if (!isShow) {
+      console.log(window.innerWidth);
+      // tamanho da descrição da questão de acordo com tamanho da tela
+      const tamanho = window.innerWidth > 420 ? 75 : 140;
       gsap.to(`#questionDesc${id}`, {
-        height: 75,
+        height: tamanho,
         opacity: 1,
       });
       gsap.to(`#arrow${id}`, {
@@ -40,12 +43,7 @@ export default function Question({ id, title, desc }) {
     <QuestionContainer>
       <div className="question-title" id={`questionTitle${id}`} onClick={handleClick}>
         <h2>{title}</h2>
-        <FaArrowUp
-          size={30}
-          cursor="pointer"
-          className="arrow"
-          id={`arrow${id}`}
-        />
+        <FaArrowUp size={30} cursor="pointer" className="arrow" id={`arrow${id}`} />
       </div>
       <div className="question-desc" id={`questionDesc${id}`}>
         <p>{desc}</p>
