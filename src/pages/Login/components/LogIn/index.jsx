@@ -73,7 +73,7 @@ export default function LogIn() {
           }}
         />
         <CustomInput reference={emailRef} label="Email" />
-        <CustomInput reference={passwordRef} label="Senha" />
+        <CustomInput reference={passwordRef} label="Senha" type="password" />
         <CustomButton>Logar</CustomButton>
       </form>
     </LogInContainer>

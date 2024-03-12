@@ -7,16 +7,21 @@ import React from 'react';
 // Imports Modules
 import { InputContainer } from './styled';
 
-export default function CustomInput({ label, reference }) {
+export default function CustomInput({ label, reference, type }) {
   return (
     <InputContainer>
-      <input type="text" ref={reference} required />
+      <input type={type} ref={reference} required />
       <label>{label}</label>
     </InputContainer>
   );
 }
 
+CustomInput.defaultProps = {
+  type: 'text',
+};
+
 CustomInput.propTypes = {
   label: PropTypes.string.isRequired,
   reference: PropTypes.shape().isRequired,
+  type: PropTypes.string,
 };

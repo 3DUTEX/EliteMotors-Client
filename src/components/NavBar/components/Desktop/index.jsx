@@ -31,8 +31,6 @@ export default function Desktop() {
           <Link to="/vehicles/all">
             <li className="option">Veiculos</li>
           </Link>
-          <li className="option">Locais</li>
-          <li className="option">option4</li>
         </ul>
       </div>
       {isLoggedIn ? (

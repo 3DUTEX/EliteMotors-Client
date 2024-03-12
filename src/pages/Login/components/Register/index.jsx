@@ -43,12 +43,17 @@ export default function Register({ changeOption }) {
     const password = passwordRef.current.value;
 
     if (name.length < 3 || name.length > 30) {
+      dispatch(authActions.changeLoading({ isLoading: false }));
       return toast.error('O nome deve conter entre 3 a 30 caracteres');
     }
 
-    if (!isEmail(email)) return toast.error('Email inválido');
+    if (!isEmail(email)) {
+      dispatch(authActions.changeLoading({ isLoading: false }));
+      return toast.error('Email inválido');
+    }
 
     if (password.length === 0 || password.length > 60) {
+      dispatch(authActions.changeLoading({ isLoading: false }));
       return toast.error('A senha não pode estar vazia e deve conter no máximo 60 caracteres');
     }
 
@@ -75,9 +80,9 @@ export default function Register({ changeOption }) {
     <RegisterContainer className="register-container">
       <h2>Registrar</h2>
       <form className="form-register" onSubmit={handleSubmit} noValidate>
-        <CustomInput reference={nameRef} label="Nome" type="text" />
-        <CustomInput reference={emailRef} label="Email" type="text" />
-        <CustomInput reference={passwordRef} label="Senha" type="text" />
+        <CustomInput reference={nameRef} label="Nome" />
+        <CustomInput reference={emailRef} label="Email" />
+        <CustomInput reference={passwordRef} label="Senha" type="password" />
         <CustomButton>Registrar</CustomButton>
       </form>
     </RegisterContainer>
