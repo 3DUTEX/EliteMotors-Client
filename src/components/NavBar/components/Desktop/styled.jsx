@@ -14,29 +14,29 @@ export const DesktopContainer = styled.div`
   width: 100%;
   max-height: 75px;
   padding: 20px 40px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
   background: #fff;
 
   .options {
-    // options config
+    //options
   }
 
-  .options ul{
+  .options ul {
     display: flex;
     gap: 0 30px;
     overflow-x: auto;
   }
 
-  .logo-title{
+  .logo-title {
     color: ${PRIMARY_COLOR};
   }
 
-  .option{
+  .option {
     text-transform: uppercase;
   }
 
-  .option:hover{
+  .option:hover {
     transition: color 150ms ease-in-out;
     color: ${PRIMARY_COLOR};
     cursor: pointer;
@@ -48,7 +48,7 @@ export const DesktopContainer = styled.div`
     gap: 0 10px;
   }
 
-  .login-container:hover{
+  .login-container:hover {
     transition: 250ms ease;
     color: ${PRIMARY_COLOR};
     cursor: pointer;

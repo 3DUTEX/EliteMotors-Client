@@ -59,6 +59,11 @@ export default function Mobile() {
             <Link to="/vehicles/all">
               <li className="option">Veiculos</li>
             </Link>
+            {isLoggedIn && (
+              <Link to="/reservations">
+                <li className="option">Minhas Reservas</li>
+              </Link>
+            )}
           </ul>
         </Menu>
       )}

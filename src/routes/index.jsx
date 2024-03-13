@@ -8,6 +8,7 @@ import Home from '../pages/Home';
 import Login from '../pages/Login';
 import NotFound from '../pages/NotFound';
 import OneVehicle from '../pages/OneVehicle';
+import Reservations from '../pages/Reservations';
 
 export default function RoutesConfig() {
   return (
@@ -19,6 +20,7 @@ export default function RoutesConfig() {
           <Route path="all" element={<AllVehicles />} />
           <Route path=":id" element={<OneVehicle />} />
         </Route>
+        <Route path="/reservations" element={<Reservations />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
